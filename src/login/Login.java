@@ -12,6 +12,11 @@ public class Login {
 
     private String storedUsername;
     private String storedPassword;
+    private String storedfirstName;
+    private String storedlastName;
+    private String firstName;
+    private String lastName;
+    
     
 
     // 1. Username check
@@ -64,6 +69,8 @@ public class Login {
         // store details
         storedUsername = username;
         storedPassword = password;
+        storedfirstName = firstName;
+        storedlastName = lastName;
 
         return "User successfully registered.";
     }
@@ -76,7 +83,8 @@ public class Login {
     // 6. Return login message
     public String returnLoginStatus(boolean loginSuccess) {
         if (loginSuccess) {
-            return "Login successful.";
+            
+            return "Welcome " + storedfirstName + " " + storedlastName + " it is great to see you.";
         } else {
             return "Login failed.";
         }

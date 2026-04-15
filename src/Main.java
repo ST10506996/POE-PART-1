@@ -24,6 +24,10 @@ public class Main {
 
         System.out.print("Enter phone number: ");
         String phone = input.nextLine();
+        
+        System.out.print("Enter first name: ");
+        
+        System.out.print("Enter last name: ");
 
         // Register
         String result = login.registerUser(username, password, phone);
